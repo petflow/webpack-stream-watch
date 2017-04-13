@@ -8,7 +8,7 @@ Run [webpack](https://github.com/webpack/webpack) as a stream to conveniently in
 
 ```js
 var gulp = require('gulp');
-var webpack = require('webpack-stream');
+var webpack = require('webpack2-stream-watch');
 gulp.task('default', function() {
   return gulp.src('src/entry.js')
     .pipe(webpack())
@@ -97,7 +97,7 @@ Or pipe files through a stream that names the chunks. A convenient library for t
 
 ```js
 var gulp = require('gulp');
-var webpack = require('webpack-stream');
+var webpack = require('webpack2-stream-watch');
 var named = require('vinyl-named');
 gulp.task('default', function() {
   return gulp.src(['src/app.js', 'test/test.js'])
