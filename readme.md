@@ -46,7 +46,7 @@ If you would like to use a different version of webpack than the one this plugin
 ```js
 var gulp = require('gulp');
 var webpack = require('webpack');
-var gulpWebpack = require('webpack-stream');
+var gulpWebpack = require('webpack2-stream-watch');
 gulp.task('default', function() {
   return gulp.src('src/entry.js')
     .pipe(gulpWebpack({}, webpack))
@@ -59,7 +59,7 @@ Pass in 3rd argument if you want to access the stats outputted from webpack when
 
 ```js
 var gulp = require('gulp');
-var webpack = require('webpack-stream');
+var webpack = require('webpack2-stream-watch');
 gulp.task('default', function() {
   return gulp.src('src/entry.js')
     .pipe(webpack({
@@ -77,7 +77,7 @@ A common request is how to handle multiple entry points. You can continue to pas
 
 ```js
 var gulp = require('gulp');
-var webpack = require('webpack-stream');
+var webpack = require('webpack2-stream-watch');
 gulp.task('default', function() {
   return gulp.src('src/entry.js')
     .pipe(webpack({
@@ -115,7 +115,7 @@ Source maps are built into webpack, specify a [devtool](https://webpack.github.i
 
 ```js
 var gulp = require('gulp');
-var webpack = require('webpack-stream');
+var webpack = require('webpack2-stream-watch');
 var named = require('vinyl-named');
 gulp.task('default', function() {
   return gulp.src(['src/app.js', 'test/test.js'])
@@ -136,7 +136,7 @@ to a stream and handle the source map files emitted by webpack:
 
 ```js
 var gulp = require('gulp');
-var webpack = require('webpack-stream');
+var webpack = require('webpack2-stream-watch');
 var named = require('vinyl-named');
 var through = require('through2');
 var sourcemaps = require('gulp-sourcemaps');
